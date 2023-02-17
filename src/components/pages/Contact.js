@@ -4,6 +4,15 @@ import '../../styles/Style.css';
 
 import { validateEmail } from '../../utils/helpers';
 
+const styles = {
+  heading: {
+      marginTop: "20px",
+      color: "white",
+      fontSize: "30px",
+      fontWeight: "bold"
+  },
+}
+
 function Contact() {
   // Crear variables de estado para los campos del formulario
   // También estamos configurando sus valores iniciales en una cadena vacía
@@ -81,6 +90,7 @@ function Contact() {
 
   return (
     <div>
+      <h2 style={styles.heading}>Contact</h2>
       <form className="form" style={{marginTop:"15px"}}>
         <p className="formTexts">Name:</p>
         <div>
