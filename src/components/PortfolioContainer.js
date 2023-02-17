@@ -5,26 +5,11 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import Footer from './Footer';
-const apps = [
-  {
-    title: "Title 1",
-    appLink: "Link1",
-    appGithub: "Github1",
-    lesson: "Lesson1"
-  },
-  {
-    title: "Title 2",
-    appLink: "Link2",
-    appGithub: "Github2",
-    lesson: "Lesson2"
-  },
-  {
-    title: "Title 3",
-    appLink: "Link3",
-    appGithub: "Github3",
-    lesson: "Lesson3"
-  },
-];
+import '../styles/index.css'
+
+const styles = {
+  backgroundImage: "linear-gradient(rgba(5, 87, 76, 0.5) 0%, rgb(5, 61, 87, 1) 100%"
+}
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('About');
@@ -34,7 +19,7 @@ export default function PortfolioContainer() {
       return <About />;
     }
     if (currentPage === 'Portfolio') {
-      return <Portfolio applications = {apps}/>;
+      return <Portfolio />;
     }
     if (currentPage === 'Contact') {
       return <Contact />;
@@ -48,9 +33,11 @@ export default function PortfolioContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div>
+    <div style={styles}>
       <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
-      {renderPage()}
+      <div className="container">
+        {renderPage()}
+      </div>
       <Footer/>
     </div>
   );
