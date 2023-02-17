@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../styles/Style.css';
 
 
 import { validateEmail } from '../../utils/helpers';
@@ -23,6 +24,20 @@ function Contact() {
     //  TODO: Agregar otra declaración al final que establecerá la contraseña en el valor "inputValue"
 
     if (inputType === 'email') {
+      setEmail(inputValue);
+    } else if (inputType === 'name') {
+      setName(inputValue);
+    } else if (inputType === 'message') {
+      setMessage(inputValue);
+    }
+  };
+
+  const validateInput = (e) => {
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
+
+    if (inputType === 'email') {
       if (!email) {
         setErrorMessage('Introduce your email');
         // Queremos salir de este bloque de código si algo está mal para que el usuario pueda corregirlo
@@ -31,24 +46,28 @@ function Contact() {
         setErrorMessage('Your email is invalid');
         // Queremos salir de este bloque de código si algo está mal para que el usuario pueda corregirlo
         return;
+      } else{
+        setErrorMessage('');
       }
-      setEmail(inputValue);
     } else if (inputType === 'name') {
       if (!name) {
         setErrorMessage('Introduce your name');
         // Queremos salir de este bloque de código si algo está mal para que el usuario pueda corregirlo
         return;
+      } else{
+        setErrorMessage('');
       }
-      setName(inputValue);
     } else if (inputType === 'message') {
       if (!message) {
         setErrorMessage('Message is required');
         // Queremos salir de este bloque de código si algo está mal para que el usuario pueda corregirlo
         return;
-      } 
-      setMessage(inputValue);
+      } else {
+        setErrorMessage('');
+      }
+      
     }
-  };
+  }
 
   const handleFormSubmit = (e) => {
     // Evitar el comportamiento predeterminado del envío del formulario (que es para actualizar la página)
@@ -62,30 +81,47 @@ function Contact() {
 
   return (
     <div>
-      <form className="form">
-      <input
-          value={name}
-          name="name"
-          onMouseOut={handleInputChange}
-          type="text"
-          placeholder="name"
-        />
-        <input
-          value={email}
-          name="email"
-          onMouseOut={handleInputChange}
-          type="email"
-          placeholder="email"
-        />
-        <textarea
-          value={message}
-          name="message"
-          onMouseOut={handleInputChange}
-          placeholder="message"
-        />
-        <button type="button" onClick={handleFormSubmit}>
-          Submit
-        </button>
+      <form className="form" style={{marginTop:"15px"}}>
+        <p className="formTexts">Name:</p>
+        <div>
+          <input
+              value={name}
+              name="name"
+              onChange = {handleInputChange}
+              onMouseOut={validateInput}
+              type="text"
+              placeholder="name"
+              className="form-input w-50"
+            /> 
+        </div>
+        <p className="formTexts">Email address:</p>
+        <div>
+          <input
+            value={email}
+            name="email"
+            onChange = {handleInputChange}
+            onMouseOut={validateInput}
+            type="email"
+            placeholder="email"
+            className="form-input w-50"
+          />
+        </div>
+        <p className="formTexts">Message:</p>
+        <div>
+          <textarea
+            value={message}
+            name="message"
+            onChange = {handleInputChange}
+            onMouseOut={validateInput}
+            placeholder="message"
+            className="form-input w-50"
+          />
+        </div>
+        <div>
+          <button type="button" className="submitButton" onClick={handleFormSubmit}>
+            Submit
+          </button>
+        </div>
       </form>
       {errorMessage && (
         <div>
