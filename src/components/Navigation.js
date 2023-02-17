@@ -1,8 +1,17 @@
 import React from 'react';
+import '../styles/Style.css'
+
+const listStyles = {
+        list: {
+                display: "inline-flex",
+                flexWrap: "wrap",
+                listStyleType: "none"
+        },
+    }
 
 function Navigation({currentPage, handlePageChange}) {
     return (
-        <ul>
+        <ul style={listStyles.list} className="listelement">
             <li><a  href="#about"
                     onClick = {() => handlePageChange("About")}
                     className = {currentPage === "About" ? "active-link" : "inactive-link"}>About me</a></li>
