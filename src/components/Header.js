@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 
-function Header(currentPage, handlePageChange) {
+function Header({currentPage, handlePageChange}) {
     return (
         <div>
             <h1>Jorge Alejandro Ramírez Anzaldo</h1>
