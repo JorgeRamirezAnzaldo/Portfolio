@@ -1,0 +1,33 @@
+.listelement li{
+    margin-left: 25px;
+    border-style: double;
+    border-width: 0 0 5px 0;
+    border-color: rgb(234, 236, 243);
+}
+
+.listelement a{
+    font-size: 25px;
+    font-weight: 900;
+    text-decoration:none;
+    font-family:'Lucida Console', 'Arial Narrow', Arial, sans-serif;
+}
+
+.active-link{
+    color: rgb(65, 211, 155);
+}
+
+.inactive-link{
+    color: white;
+}
+
+.listelement a:hover{
+    text-decoration:none;
+}
+
+.elementIcon {
+    margin-left:15px;
+}
+
+.elementIcon:hover {
+    opacity: 0.5;
+}
