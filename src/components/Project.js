@@ -26,7 +26,7 @@ function Project({application}) {
         <a className="appLink" href={application.appLink} target="_blank">
             <h3  style={styles.title}>{application.title}</h3>
         </a>
-        <a className="appLink" href={application.appGithub} ><FaGithub size={28} style={styles.icon}></FaGithub></a>
+        <a className="appLink" href={application.appGithub} target="_blank"><FaGithub size={28} style={styles.icon}></FaGithub></a>
         <h4 style={styles.lesson}>{application.lesson}</h4>
       </div>
       
