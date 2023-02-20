@@ -27,9 +27,9 @@ function Footer() {
         <div style={styles.footer}>
             <nav> 
                 <ul style={styles.list}>
-                    <li class="elementIcon"><a href="https://github.com/JorgeRamirezAnzaldo" target="_blank"><FaGithub size={50} style={styles.icon}></FaGithub></a></li>
-                    <li class="elementIcon"><a href="https://www.linkedin.com/in/jorge-alejandro-ram%C3%ADrez-anzaldo-b1350010a/" target="_blank"><FaLinkedin size={50} style={styles.icon}></FaLinkedin></a></li>
-                    <li class="elementIcon"><a href="" target="_blank"><FaTwitterSquare size={50} style={styles.icon}></FaTwitterSquare></a></li>
+                    <li className="elementIcon"><a href="https://github.com/JorgeRamirezAnzaldo" target="_blank"><FaGithub size={50} style={styles.icon}></FaGithub></a></li>
+                    <li className="elementIcon"><a href="https://www.linkedin.com/in/jorge-alejandro-ram%C3%ADrez-anzaldo-b1350010a/" target="_blank"><FaLinkedin size={50} style={styles.icon}></FaLinkedin></a></li>
+                    <li className="elementIcon"><a href="" target="_blank"><FaTwitterSquare size={50} style={styles.icon}></FaTwitterSquare></a></li>
                 </ul>
             </nav>
         </div>

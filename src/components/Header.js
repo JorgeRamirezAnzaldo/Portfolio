@@ -14,7 +14,7 @@ const styles = {
         height: "300px"
     },
     heading: {
-        fontSize: "36px",
+        fontSize: "34px",
         marginLeft: "40px",
         backgroundColor:"rgb(36, 84, 100)"
     },
