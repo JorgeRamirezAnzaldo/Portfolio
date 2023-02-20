@@ -63,3 +63,48 @@
     font-size: 22px;
     margin-top: 10px;
 }
+
+.projectContainer{
+    margin-top:50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.appSection{
+    margin-top: 50px;
+    border-color: white;
+    border-style:solid;
+    width: 500px;
+    height: 200px;
+    align-items:center;
+}
+
+.appSection:hover{
+    opacity:0.9;
+}
+
+.appData{
+    opacity: 1;
+    height:100%;
+    visibility: hidden;
+    padding-top: 40px;
+}
+
+.appLink{
+    margin-left: 20px;
+}
+
+.appSection:hover .appData{
+    visibility: visible;
+    background:rgba(255,255,255, 0.5);
+}
+
+.appLink:hover{
+    opacity: 0.6;
+}
+
+
+
