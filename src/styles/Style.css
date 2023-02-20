@@ -52,6 +52,15 @@
     margin-top:20px;
 }
 
+.contactList{
+    color:white;
+    font-size:20px;
+}
+
+.contactList a{
+    color:white;
+}
+
 .error-text{
     padding-top:20px;
     color:white;
@@ -65,12 +74,19 @@
 }
 
 .projectContainer{
-    margin-top:50px;
+    margin-top:10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     
+}
+
+.portfolioHeading{
+    padding-top: 30px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .appSection{
@@ -99,7 +115,8 @@
 
 .appSection:hover .appData{
     visibility: visible;
-    background:rgba(255,255,255, 0.5);
+    background:rgba(255,255,255, 0.9);
+    transition:1s;
 }
 
 .appLink:hover{
