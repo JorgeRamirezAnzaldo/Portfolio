@@ -91,6 +91,10 @@ function Contact() {
   return (
     <div>
       <h2 style={styles.heading}>Contact</h2>
+      <ul>
+        <li className="contactList">Phone number: <a href="https://wa.me/+525519281738">+52 5519281738</a></li>
+        <li className="contactList">Email: <a href="mailto: jaanzaldo@hotmail.com">jaanzaldo@hotmail.com</a></li>
+      </ul>
       <form className="form" style={{marginTop:"15px"}}>
         <p className="formTexts">Name:</p>
         <div>
