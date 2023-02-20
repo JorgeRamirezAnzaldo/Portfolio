@@ -1,6 +1,9 @@
+//Import react
 import React from 'react';
+//Import styles from Style.css file
 import '../styles/Style.css';
 
+//Define styles for navigation list
 const listStyles = {
         list: {
                 display: "inline-flex",
@@ -10,6 +13,7 @@ const listStyles = {
         },
     }
 
+//Define function to return navigation bar with links as list elements
 function Navigation({currentPage, handlePageChange}) {
     return (
         <ul style={listStyles.list} className="listelement">
@@ -31,4 +35,5 @@ function Navigation({currentPage, handlePageChange}) {
 
 }
 
+//Export Navigation
 export default Navigation;

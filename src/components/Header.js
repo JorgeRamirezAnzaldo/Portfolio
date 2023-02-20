@@ -1,14 +1,17 @@
+//Import react
 import React from 'react';
+//Import Navigation component
 import Navigation from './Navigation';
+//Import image for header background
 import backgroundHeader from '../images/FondoPaginaWeb.png';
 
+//Define styles for the header elements
 const styles = {
     header : {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
         color: "white",
-        //backgroundImage: "linear-gradient(rgb(5, 61, 87, 0.6) 0%, rgb(5, 61, 87, 1) 100%",
         background: `url(${backgroundHeader})`,
         backgroundSize: "cover",
         height: "300px"
@@ -25,6 +28,7 @@ const styles = {
     }
 }
 
+//Define function to return header elements with proper styles, navigation bar with links is included here
 function Header({currentPage, handlePageChange}) {
     return (
         <div style = {styles.header}>
@@ -35,6 +39,5 @@ function Header({currentPage, handlePageChange}) {
 
     }
 
-
-
+//Export Header
 export default Header;

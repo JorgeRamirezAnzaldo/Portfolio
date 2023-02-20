@@ -1,6 +1,9 @@
+//Import react
 import React from 'react';
+//Import Github icon from react-icons/fa
 import { FaGithub } from 'react-icons/fa';
 
+//Define styles for project component
 const styles = {
   title:{
     display: "inline-block",
@@ -19,6 +22,7 @@ const styles = {
   },
 }
 
+//Define function to return project elements including app screenshot, title, app link, GitHub link and lesson
 function Project({application}) {
   return (
     <section className="appSection" style={{background: `url(${application.image})`, backgroundSize: "cover"}} > 
@@ -35,4 +39,5 @@ function Project({application}) {
   );
 }
 
+//Export Project
 export default Project;

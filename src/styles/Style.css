@@ -1,3 +1,4 @@
+/*Properties for navigation list elements*/
 .listelement li{
     margin-left: 25px;
     border-style: double;
@@ -5,6 +6,7 @@
     border-color: rgb(234, 236, 243);
 }
 
+/*Properties for navigation links in list elements*/
 .listelement a{
     font-size: 25px;
     font-weight: 900;
@@ -12,26 +14,32 @@
     font-family:'Lucida Console', 'Arial Narrow', Arial, sans-serif;
 }
 
+/*Properties for active navigation link*/
 .active-link{
     color: rgb(65, 211, 155);
 }
 
+/*Properties for inactive navigation link*/
 .inactive-link{
     color: white;
 }
 
+/*Properties when hovering over the navigation links*/
 .listelement a:hover{
     text-decoration:none;
 }
 
+/*Properties for the icons in the footer*/
 .elementIcon {
     margin-left:15px;
 }
 
+/*Properties when hovering over the icons in the footer*/
 .elementIcon:hover {
     opacity: 0.5;
 }
 
+/*Properties for submit button in Contact page*/
 .submitButton {
     margin-top:20px;
     width:200px;
@@ -42,37 +50,44 @@
     opacity: 0.7;
 }
 
+/*Properties when hovering over the submit button in Contact page*/
 .submitButton:hover{
     opacity:1;
 }
 
+/*Properties for the form texts in Contact page*/
 .formTexts {
     color:white;
     font-size:22px;
     margin-top:20px;
 }
 
+/*Properties for the list elements in Contact page*/
 .contactList{
     color:white;
     font-size:20px;
 }
 
+/*Properties for the links in the list elements of the Contact page*/
 .contactList a{
     color:white;
 }
 
+/*Properties for the error text in the Contact page*/
 .error-text{
     padding-top:20px;
     color:white;
     font-size: 18px;
 }
 
+/*Properties for the proficiencies list elements*/
 .profList li{
     color:white;
     font-size: 22px;
     margin-top: 10px;
 }
 
+/*Properties for the projects container*/
 .projectContainer{
     margin-top:10px;
     display: flex;
@@ -82,6 +97,7 @@
     
 }
 
+/*Properties for portfolio heading*/
 .portfolioHeading{
     padding-top: 30px;
     color: white;
@@ -89,6 +105,7 @@
     font-weight: bold;
 }
 
+/*Properties for application sections*/
 .appSection{
     margin-top: 50px;
     border-color: white;
@@ -98,10 +115,12 @@
     align-items:center;
 }
 
+/*Properties when hovering over the application sections*/
 .appSection:hover{
     opacity:0.9;
 }
 
+/*Properties for application data*/
 .appData{
     opacity: 1;
     height:100%;
@@ -109,16 +128,19 @@
     padding-top: 40px;
 }
 
+/*Properties for application links*/
 .appLink{
     margin-left: 20px;
 }
 
+/*Properties when hovering over the application sections*/
 .appSection:hover .appData{
     visibility: visible;
     background:rgba(255,255,255, 0.9);
     transition:1s;
 }
 
+/*Properties when hovering over the application links*/
 .appLink:hover{
     opacity: 0.6;
 }

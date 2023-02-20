@@ -1,6 +1,10 @@
+//Import react
 import React from 'react';
+//Import Project component
 import Project from '../Project';
+//Import styles from Style.css file
 import '../../styles/Style.css';
+//Import images for the applications
 import editorImage from '../../images/Editor.JPG';
 import synesthesiaImage from '../../images/Synesthesia.JPG';
 import orderManagerImage from '../../images/OrderManager.JPG';
@@ -8,6 +12,7 @@ import weatherImage from '../../images/Weather.JPG';
 import notepadImage from '../../images/Notepad.JPG';
 import agendaImage from '../../images/Agenda.JPG';
 
+//Create an object array with the data of all the applications to be displayed in the portfolio section
 const apps = [
   {
     title: "Synesthesia",
@@ -53,12 +58,13 @@ const apps = [
   },
 ];
 
+//Define function to return all the Portfolio elements
 function Portfolio() {
   return (
     <div>
       <h2 className="portfolioHeading">Portfolio</h2>
       <section className="projectContainer">
-        {/* TODO: Utilice el metodo `map` para iterar sobre cada elemento `grocery` y regrese un elemento `li` que contenga el nombre del elemento y un atributo único*/}
+        {/*Iterate over the applications array to display each application in the portfolio using the Project component*/}
         {apps.map((application) => {
           return (
             <Project application = {application}/>
@@ -69,4 +75,5 @@ function Portfolio() {
   );
 }
 
+//Export Portfolio
 export default Portfolio;

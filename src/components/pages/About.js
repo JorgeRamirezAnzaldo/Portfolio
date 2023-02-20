@@ -1,6 +1,9 @@
+//Import react
 import React from 'react';
+//Import personal photo
 import PersonalPhoto from '../../images/PersonalPhoto.jpeg';
 
+//Define styles for the About page
 const styles = {
     photo: {
         height: "250px",
@@ -20,6 +23,7 @@ const styles = {
     }
 }
 
+//Define function to return the elements of About page
 function About() {
     return (
         <div>
@@ -37,4 +41,5 @@ function About() {
 
 }
 
+//Export About
 export default About;

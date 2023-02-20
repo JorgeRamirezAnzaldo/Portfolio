@@ -1,9 +1,11 @@
+//Import react
 import React, { useState } from 'react';
+//Import styles from Style.css file
 import '../../styles/Style.css';
-
-
+//Import function from utilities to validate email
 import { validateEmail } from '../../utils/helpers';
 
+//Define styles for the Contact page
 const styles = {
   heading: {
       marginTop: "20px",
@@ -13,25 +15,23 @@ const styles = {
   },
 }
 
+//Define function to return elements and functions for Contact page
 function Contact() {
-  // Crear variables de estado para los campos del formulario
-  // También estamos configurando sus valores iniciales en una cadena vacía
+  //Create state variables for the input fields in form and set empty string as initial value
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
-  //  TODO: Crear una variable de contraseña y una función "setPassword" usando useState
-
+  //Create state variables for the error message and set empty string as initial value
   const [errorMessage, setErrorMessage] = useState('');
 
+  //Define function to handle changes in input fields
   const handleInputChange = (e) => {
-    // Obtener el valor y el nombre de la entrada que desencadenó el cambio
+    //Get the name and value of the input field that triggered the change
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
 
-    // Según el tipo de entrada, establecemos el estado del correo electrónico, el nombre de usuario y la contraseña
-    //  TODO: Agregar otra declaración al final que establecerá la contraseña en el valor "inputValue"
-
+    //Based on the input field name, change the state of the input field using the introduced value
     if (inputType === 'email') {
       setEmail(inputValue);
     } else if (inputType === 'name') {
@@ -41,35 +41,34 @@ function Contact() {
     }
   };
 
+  //Function to validate the input 
   const validateInput = (e) => {
+    //Get the name and value of the input field
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
 
+    //Validate if email is not empty and has the correct format
     if (inputType === 'email') {
       if (!email) {
-        setErrorMessage('Introduce your email');
-        // Queremos salir de este bloque de código si algo está mal para que el usuario pueda corregirlo
+        setErrorMessage('Introduce your email'); //Change state of error message
         return;
       } else if (!validateEmail(email)) {
-        setErrorMessage('Your email is invalid');
-        // Queremos salir de este bloque de código si algo está mal para que el usuario pueda corregirlo
+        setErrorMessage('Your email is invalid'); //Change state of error message
         return;
       } else{
         setErrorMessage('');
       }
-    } else if (inputType === 'name') {
+    } else if (inputType === 'name') { //Validate if name is not empty
       if (!name) {
-        setErrorMessage('Introduce your name');
-        // Queremos salir de este bloque de código si algo está mal para que el usuario pueda corregirlo
+        setErrorMessage('Introduce your name'); //Change state of error message
         return;
       } else{
         setErrorMessage('');
       }
-    } else if (inputType === 'message') {
+    } else if (inputType === 'message') { //Validate if message is not empty
       if (!message) {
-        setErrorMessage('Message is required');
-        // Queremos salir de este bloque de código si algo está mal para que el usuario pueda corregirlo
+        setErrorMessage('Message is required'); //Change state of error message
         return;
       } else {
         setErrorMessage('');
@@ -78,16 +77,17 @@ function Contact() {
     }
   }
 
+  //Define function when submitting form
   const handleFormSubmit = (e) => {
-    // Evitar el comportamiento predeterminado del envío del formulario (que es para actualizar la página)
+    //Prevent default behavior of the form submission
     e.preventDefault();
-    // Si se realiza correctamente, queremos borrar la entrada después del registro.
+    //Clean all the input fields by changing their states
     setName('');
     setEmail('');
     setMessage('');
-    //alert(`Hello ${userName}`);
   };
 
+  //Return contact data along with the contact form
   return (
     <div>
       <h2 style={styles.heading}>Contact</h2>
@@ -146,4 +146,5 @@ function Contact() {
   );
 }
 
+//Export Contact
 export default Contact;

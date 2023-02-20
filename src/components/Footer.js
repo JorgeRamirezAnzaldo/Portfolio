@@ -1,8 +1,11 @@
+//Import react
 import React from 'react';
+//Import necessary icons from react-icons/fa
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaTwitterSquare } from 'react-icons/fa';
 
+//Define styles for elements in the footer
 const styles = {
     list: {
             display: "inline-flex",
@@ -21,7 +24,7 @@ const styles = {
     }
 }
 
-
+//Define function to return footer elements with proper styles
 function Footer() {
     return (
         <div style={styles.footer}>
@@ -39,4 +42,5 @@ function Footer() {
 
 }
 
+//Export Footer
 export default Footer;

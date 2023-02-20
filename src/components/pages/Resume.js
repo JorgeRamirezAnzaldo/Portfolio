@@ -1,5 +1,9 @@
+//Import react
 import React from 'react';
+//Import resume file from assets
 import resumeFile from "../../assets/files/Resume.pdf";
+
+//Define styles for the resume page
 const styles = {
     heading: {
         marginTop: "20px",
@@ -16,6 +20,7 @@ const styles = {
     }
   }
 
+//Define function to return all the Resume elements with a link to download resume and a list of proficiencies
 function Resume() {
     return (
         <div>
@@ -47,4 +52,5 @@ function Resume() {
 
 }
 
+//Export Resume
 export default Resume;
