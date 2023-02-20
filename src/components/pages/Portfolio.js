@@ -2,57 +2,70 @@ import React from 'react';
 import Project from '../Project';
 import '../../styles/Style.css';
 import editorImage from '../../images/Editor.JPG';
+import synesthesiaImage from '../../images/Synesthesia.JPG';
+import orderManagerImage from '../../images/OrderManager.JPG';
+import weatherImage from '../../images/Weather.JPG';
+import notepadImage from '../../images/Notepad.JPG';
+import agendaImage from '../../images/Agenda.JPG';
 
 const apps = [
   {
-    title: "Title 1",
-    appLink: "Link1",
-    appGithub: "Github1",
-    lesson: "Lesson1",
+    title: "Synesthesia",
+    appLink: "https://djonguitud.github.io/synesthesia-project/",
+    appGithub: "https://github.com/djonguitud/synesthesia-project",
+    lesson: "Integration project 1",
+    image: synesthesiaImage
+  },
+  {
+    title: "Order Manager",
+    appLink: "https://order-manager-application.herokuapp.com/",
+    appGithub: "https://github.com/jaime-a-esquivel-a/OrderManager",
+    lesson: "Integration project 2",
+    image: orderManagerImage
+  },
+  {
+    title: "Text Editor",
+    appLink: "https://editor-texto-jate.herokuapp.com/",
+    appGithub: "https://github.com/JorgeRamirezAnzaldo/Editor-Texto",
+    lesson: "PWA",
     image: editorImage
   },
   {
-    title: "Title 2",
-    appLink: "Link2",
-    appGithub: "Github2",
-    lesson: "Lesson2"
+    title: "Weather Dashboard",
+    appLink: "https://jorgeramirezanzaldo.github.io/Tablero-Meteorologico/",
+    appGithub: "https://github.com/JorgeRamirezAnzaldo/Tablero-Meteorologico",
+    lesson: "Server-side APIs",
+    image: weatherImage
   },
   {
-    title: "Title 3",
-    appLink: "Link3",
-    appGithub: "Github3",
-    lesson: "Lesson3"
+    title: "Notepad",
+    appLink: "https://cuaderno-de-notas.herokuapp.com/",
+    appGithub: "https://github.com/JorgeRamirezAnzaldo/Cuaderno-de-Notas",
+    lesson: "Express",
+    image: notepadImage
   },
   {
-    title: "Title 4",
-    appLink: "Link4",
-    appGithub: "Github4",
-    lesson: "Lesson4"
-  },
-  {
-    title: "Title 5",
-    appLink: "Link5",
-    appGithub: "Github5",
-    lesson: "Lesson5"
-  },
-  {
-    title: "Title 6",
-    appLink: "Link6",
-    appGithub: "Github6",
-    lesson: "Lesson6"
+    title: "Daily agenda",
+    appLink: "https://jorgeramirezanzaldo.github.io/Agenda-diaria/",
+    appGithub: "https://github.com/JorgeRamirezAnzaldo/Agenda-diaria",
+    lesson: "Third party APIs",
+    image: agendaImage
   },
 ];
 
 function Portfolio() {
   return (
-    <section className="projectContainer">
-      {/* TODO: Utilice el metodo `map` para iterar sobre cada elemento `grocery` y regrese un elemento `li` que contenga el nombre del elemento y un atributo único*/}
-      {apps.map((application) => {
-        return (
-          <Project application = {application}/>
-        );
-      })}
-    </section>
+    <div>
+      <h2 className="portfolioHeading">Portfolio</h2>
+      <section className="projectContainer">
+        {/* TODO: Utilice el metodo `map` para iterar sobre cada elemento `grocery` y regrese un elemento `li` que contenga el nombre del elemento y un atributo único*/}
+        {apps.map((application) => {
+          return (
+            <Project application = {application}/>
+          );
+        })}
+      </section>
+    </div>
   );
 }
 
