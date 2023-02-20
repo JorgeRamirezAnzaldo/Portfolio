@@ -5,7 +5,8 @@ const listStyles = {
         list: {
                 display: "inline-flex",
                 flexWrap: "wrap",
-                listStyleType: "none"
+                listStyleType: "none",
+                marginRight: "20px"
         },
     }
 
