@@ -25,7 +25,7 @@ const styles = {
 //Define function to return project elements including app screenshot, title, app link, GitHub link and lesson
 function Project({application}) {
   return (
-    <section className="appSection" style={{background: `url(${application.image})`, backgroundSize: "cover"}} > 
+    <section className="appSection" style={{background: `url(${application.image})`, backgroundSize: "cover"}}> 
       <div className = "appData">
         <a className="appLink" href={application.appLink} target="_blank">
             <h3  style={styles.title}>{application.title}</h3>
