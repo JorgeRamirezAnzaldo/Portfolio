@@ -19,42 +19,48 @@ const apps = [
     appLink: "https://djonguitud.github.io/synesthesia-project/",
     appGithub: "https://github.com/djonguitud/synesthesia-project",
     lesson: "Integration project 1",
-    image: synesthesiaImage
+    image: synesthesiaImage,
+    id: 1
   },
   {
     title: "Order Manager",
     appLink: "https://order-manager-application.herokuapp.com/",
     appGithub: "https://github.com/jaime-a-esquivel-a/OrderManager",
     lesson: "Integration project 2",
-    image: orderManagerImage
+    image: orderManagerImage,
+    id: 2
   },
   {
     title: "Text Editor",
     appLink: "https://editor-texto-jate.herokuapp.com/",
     appGithub: "https://github.com/JorgeRamirezAnzaldo/Editor-Texto",
     lesson: "PWA",
-    image: editorImage
+    image: editorImage,
+    id: 3
   },
   {
     title: "Weather Dashboard",
     appLink: "https://jorgeramirezanzaldo.github.io/Tablero-Meteorologico/",
     appGithub: "https://github.com/JorgeRamirezAnzaldo/Tablero-Meteorologico",
     lesson: "Server-side APIs",
-    image: weatherImage
+    image: weatherImage,
+    id: 4
   },
   {
     title: "Notepad",
     appLink: "https://cuaderno-de-notas.herokuapp.com/",
     appGithub: "https://github.com/JorgeRamirezAnzaldo/Cuaderno-de-Notas",
     lesson: "Express",
-    image: notepadImage
+    image: notepadImage,
+    id: 5
   },
   {
     title: "Daily agenda",
     appLink: "https://jorgeramirezanzaldo.github.io/Agenda-diaria/",
     appGithub: "https://github.com/JorgeRamirezAnzaldo/Agenda-diaria",
     lesson: "Third party APIs",
-    image: agendaImage
+    image: agendaImage,
+    id: 6
   },
 ];
 
@@ -67,7 +73,7 @@ function Portfolio() {
         {/*Iterate over the applications array to display each application in the portfolio using the Project component*/}
         {apps.map((application) => {
           return (
-            <Project application = {application}/>
+            <Project application = {application} key={application.id}/>
           );
         })}
       </section>
