@@ -21,6 +21,7 @@
 ## Enlace a la aplicación funcional
 
 * [Enlace a aplicación en GitHub pages](https://jorgeramirezanzaldo.github.io/Portfolio/)
+* Se recomienda abrir el link en modo incógnito para evitar cualquier caché que pueda interferir con la aplicación.
 
 ## Instrucciones de instalación  
 
