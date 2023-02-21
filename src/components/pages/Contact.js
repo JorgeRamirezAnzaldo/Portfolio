@@ -34,6 +34,12 @@ function Contact() {
     //Based on the input field name, change the state of the input field using the introduced value
     if (inputType === 'email') {
       setEmail(inputValue);
+      if (!validateEmail(email)) {
+        setErrorMessage('Your email is invalid'); //Change state of error message
+        return;
+      } else{
+        setErrorMessage('');
+      }
     } else if (inputType === 'name') {
       setName(inputValue);
     } else if (inputType === 'message') {
