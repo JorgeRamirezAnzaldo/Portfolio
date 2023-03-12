@@ -8,6 +8,7 @@ import '../../styles/Style.css';
 import editorImage from '../../images/Editor.JPG';
 import synesthesiaImage from '../../images/Synesthesia.JPG';
 import orderManagerImage from '../../images/OrderManager.JPG';
+import schoolGuardianImage from '../../images/SchoolGuardian.JPG';
 import weatherImage from '../../images/Weather.JPG';
 import notepadImage from '../../images/Notepad.JPG';
 import agendaImage from '../../images/Agenda.JPG';
@@ -31,12 +32,20 @@ const apps = [
     id: 2
   },
   {
+    title: "School Guardian",
+    appLink: "https://school-guardian.herokuapp.com/",
+    appGithub: "https://github.com/JorgeRamirezAnzaldo/SchoolGuardian",
+    lesson: "Integration project 3",
+    image: schoolGuardianImage,
+    id: 3
+  },
+  {
     title: "Text Editor",
     appLink: "https://editor-texto-jate.herokuapp.com/",
     appGithub: "https://github.com/JorgeRamirezAnzaldo/Editor-Texto",
     lesson: "PWA",
     image: editorImage,
-    id: 3
+    id: 4
   },
   {
     title: "Weather Dashboard",
@@ -44,7 +53,7 @@ const apps = [
     appGithub: "https://github.com/JorgeRamirezAnzaldo/Tablero-Meteorologico",
     lesson: "Server-side APIs",
     image: weatherImage,
-    id: 4
+    id: 5
   },
   {
     title: "Notepad",
@@ -52,7 +61,7 @@ const apps = [
     appGithub: "https://github.com/JorgeRamirezAnzaldo/Cuaderno-de-Notas",
     lesson: "Express",
     image: notepadImage,
-    id: 5
+    id: 6
   },
   {
     title: "Daily agenda",
@@ -60,7 +69,7 @@ const apps = [
     appGithub: "https://github.com/JorgeRamirezAnzaldo/Agenda-diaria",
     lesson: "Third party APIs",
     image: agendaImage,
-    id: 6
+    id: 7
   },
 ];
 
